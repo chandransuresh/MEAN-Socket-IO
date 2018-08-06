@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <h3>Socket.IO MEAN ToDo App</h3>
+  <div class="row">
+    <input type="text" name="" id="" 
+    class="form-control col col-sm-8" #todo>
+
+    <input type="button" value="Add"
+    class="btn btn-primary col col-sm-3 offset-1"
+    (click)="addToDo(todo.value)">
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let todo of toDoList; let idx = index">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Task {{ idx + 1}}</h5>
+          <p class="card-text">{{todo.description}}</p>
+          <a href="#" class="btn btn-primary">Complete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
